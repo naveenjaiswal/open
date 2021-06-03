@@ -1,7 +1,7 @@
 @import "reset";
 @import "variables";
 @import "theme";
-
+@import "elements";
 
 body {
   font-family: $font;
@@ -34,11 +34,19 @@ body {
 
 .navbar-list {
   display: flex;
-  // border:1px solid red;
   justify-content: flex-start;
   align-items: center;
 }
 
+.navbar-list-item {
+  font-family: $font2;
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-right: 1rem;
+}
+.navbar-list-item:hover {
+  color:$primary;
+}
 .navbar-buttons {
   display: flex;
   justify-content: flex-start;
