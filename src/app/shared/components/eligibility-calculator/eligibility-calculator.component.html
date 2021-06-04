@@ -10,14 +10,55 @@
         [step]="monthlyIncomeStep" [(ngModel)]="monthlyIncome" aria-labelledby="monthly-income">
       </mat-slider>
       <div class="eligibility-marking">
-        <div class="eligibility-marking-left">₹ {{monthlyIncomeMin}}</div>
-        <div class="eligibility-marking-left">₹ {{monthlyIncomeMax}}</div>
+        <div>₹ {{monthlyIncomeMin}}</div>
+        <div>₹ {{monthlyIncomeMax}}</div>
       </div>
     </div>
-    <div class="eligibility-block"></div>
-    <div class="eligibility-block"></div>
-    <div class="eligibility-block"></div>
-    <div class="eligibility-block"></div>
+    <div class="eligibility-block">
+      <div class="eligibility-title">Monthly Expense</div>
+      <div class="eligibility-value">₹ {{monthlyExpense}}</div>
+      <mat-slider class="eligibility-slider" [max]="monthlyExpenseMax" [min]="monthlyExpenseMin"
+        [step]="monthlyExpenseStep" [(ngModel)]="monthlyExpense" aria-labelledby="monthly-expense">
+      </mat-slider>
+    </div>
+    <div class="eligibility-block">
+      <mat-form-field class="eligibility-select">
+        <mat-label>Repayment Tenure</mat-label>
+        <mat-select [(ngModel)]="selectedTenureValue">
+          <mat-option *ngFor="let time of tenures" [value]="time.value">
+            {{time.viewValue}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div class="eligibility-block eligibility-marking">
+      <div>
+        Do you have any existing loans?
+      </div>
+      <mat-slide-toggle [(ngModel)]="existingLoans">
+      </mat-slide-toggle>
+    </div>
+    <div class="eligibility-block">
+      <div class="eligibility-marking">
+        EMI of Existing Loan (Optional)
+      </div>
+      <mat-form-field class="eligibility-input">
+        <span matPrefix>₹ &nbsp;</span>
+        <input matInput type="number" [(ngModel)]="existingEMI" [readonly]="!existingLoans">
+      </mat-form-field>
+    </div>
   </div>
-  <div class="eligibility-response"></div>
+  <div class="eligibility-response">
+    <div class="eligibility-block">
+      <div class="eligibility-title center">Loan Amount</div>
+      <div class="eligibility-value center">₹ {{loanAmount}}</div>
+    </div>
+    <div class="eligibility-block">
+      <div class="eligibility-title center">Your EMI will be</div>
+      <div class="eligibility-value center">₹ {{monthlyEMI}}</div>
+    </div>
+    <div class="eligibility-block">
+      <button class="dark-white-btn">GET MONEY</button>
+    </div>
+  </div>
 </div>

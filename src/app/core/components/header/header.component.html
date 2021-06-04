@@ -1,8 +1,6 @@
-<header class="header">
+<header id="header" [ngClass]="{ sticky: scrolled }">
   <nav class="navbar">
-    <div>
-      <a href="/"><img class="logo" src="assets/images/logo.png"></a>
-    </div>
+    <a href="/"><img class="logo" src="assets/images/logo.png"></a>
     <div class="navbar-wrapper">
       <ul class="navbar-list">
         <li class="navbar-list-item">Products</li>

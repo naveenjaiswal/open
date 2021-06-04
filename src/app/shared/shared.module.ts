@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { EligibilityCalculatorComponent } from './components/eligibility-calculator/eligibility-calculator.component';
+import { MaterialModule } from '../core/material/material.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -9,7 +11,10 @@ import { EligibilityCalculatorComponent } from './components/eligibility-calcula
     EligibilityCalculatorComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MaterialModule
   ],
   exports: [EligibilityCalculatorComponent]
 })
