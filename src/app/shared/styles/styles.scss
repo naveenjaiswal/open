@@ -44,9 +44,11 @@ body {
   font-weight: 400;
   margin-right: 1rem;
 }
+
 .navbar-list-item:hover {
-  color:$primary;
+  color: $primary;
 }
+
 .navbar-buttons {
   display: flex;
   justify-content: flex-start;
@@ -70,14 +72,23 @@ body {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  height:100%;
 }
 
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height:100%;
+}
 .flex-item {
   flex: 1 1 50%;
-  font-weight: 500;
 }
 
-.main-1 {
+.main-1,
+.bf-2 {
   padding: 6em;
 }
 
@@ -85,6 +96,7 @@ body {
 
 .main-1-text {
   font-size: 2rem;
+  font-weight: 500;
   padding: 0 3rem;
   line-height: 2.5rem;
 }
@@ -97,4 +109,72 @@ body {
 
 .main-1-img {
   width: 80%;
+}
+
+
+.sec-text {
+  font-weight: 400;
+  font-size: 1rem;
+  padding: 0 3rem;
+  line-height: 1.125rem;
+  color: $font-sec-color;
+  margin-bottom: 2rem;
+}
+
+.benefits-container {
+  background: url(/assets/images/sol_wave_bg.svg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.box {
+  // height: 20vh;
+  width: 20vw;
+  padding:1rem;
+  background:$box-bg;
+  border-radius: 16px;
+  box-shadow: 0px 0px 30px rgba(35, 33, 50, 0.1);
+  margin-bottom: 2rem;
+}
+
+.box:hover{
+  color:$white;
+  background: $light-primary;
+}
+.bf-img {
+  width: 20%;
+  margin-bottom: 1rem;
+}
+
+.bf-title {
+  font-size: 1rem;
+  line-height: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.bf-content {
+  font-size: 1rem;
+  line-height: 1.125rem;
+  font-weight: 400;
+}
+
+.ml-3 {
+  margin-left: 3rem;
+}
+
+.mr-3 {
+  margin-right: 3rem;
+}
+
+.mb-2 {
+  margin-bottom: 2rem;
+}
+
+.pl-3 {
+  padding-left: 3rem;
+}
+
+.pr-3 {
+  padding-right: 3rem;
 }
