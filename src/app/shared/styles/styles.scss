@@ -159,6 +159,50 @@ body {
   font-weight: 400;
 }
 
+.eligibility-container{
+  display: flex;
+  flex-direction:row;
+  justify-content: flex-start;
+  align-items: center;
+  border:1px solid red;
+  // height:100%;
+}
+
+.eligibility-calculator{
+  display:flex;
+  flex-direction:column;
+  border:1px solid red;
+  flex:1 1 60%;
+}
+
+.eligibility-response{
+  display:flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items: center;
+  flex:1 1 40%;
+  background:$primary;
+  color:white;
+  height:80%;
+}
+
+.eligibility-header{
+  align-self:center;
+}
+
+.eligibility-title{}
+
+.eligibility-value{}
+
+.eligibility-slider{}
+
+.eligibility-marking{}
+
+.eligibility-marking-left{}
+
+.eligibility-marking-right{}
+
+
 .ml-3 {
   margin-left: 3rem;
 }

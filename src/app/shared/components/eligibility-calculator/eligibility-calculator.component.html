@@ -1,1 +1,23 @@
-<p>eligibility-calculator works!</p>
+<div class="eligibility-container">
+  <div class="eligibility-calculator">
+    <div class="eligibility-header">
+      Eligibility Calculator
+    </div>
+    <div class="eligibility-block">
+      <div class="eligibility-title">Monthly Income</div>
+      <div class="eligibility-value">₹ {{monthlyIncome}}</div>
+      <mat-slider class="eligibility-slider" [max]="monthlyIncomeMax" [min]="monthlyIncomeMin"
+        [step]="monthlyIncomeStep" [(ngModel)]="monthlyIncome" aria-labelledby="monthly-income">
+      </mat-slider>
+      <div class="eligibility-marking">
+        <div class="eligibility-marking-left">₹ {{monthlyIncomeMin}}</div>
+        <div class="eligibility-marking-left">₹ {{monthlyIncomeMax}}</div>
+      </div>
+    </div>
+    <div class="eligibility-block"></div>
+    <div class="eligibility-block"></div>
+    <div class="eligibility-block"></div>
+    <div class="eligibility-block"></div>
+  </div>
+  <div class="eligibility-response"></div>
+</div>
